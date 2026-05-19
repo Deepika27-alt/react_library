@@ -1,5 +1,5 @@
 /**
- * @acme/ui — Public API
+ * @deepika27-alt/ui — Public API
  *
  * Everything exported from here is part of the library's public contract.
  * Internal modules should NOT be imported directly by consumers.

@@ -5,8 +5,8 @@
     "outDir": "./dist",
     "composite": true,
     "paths": {
-      "@acme/ui": ["./src/index.ts"],
-      "@acme/ui/tokens": ["./src/tokens/index.ts"]
+      "@deepika27-alt/ui": ["./src/index.ts"],
+      "@deepika27-alt/ui/tokens": ["./src/tokens/index.ts"]
     },
     "types": ["vitest/globals"]
   },

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
-import { tokens, colorPrimary, colorNeutral, colorSuccess, colorWarning, colorDanger, colorInfo } from '@acme/ui';
+import { tokens, colorPrimary, colorNeutral, colorSuccess, colorWarning, colorDanger, colorInfo } from '@deepika27-alt/ui';
 
 const SCALES = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900] as const;
 

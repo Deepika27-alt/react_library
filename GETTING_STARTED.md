@@ -1,4 +1,4 @@
-# Getting Started with Our React UI Library
+﻿# Getting Started with Our React UI Library
 
 Welcome to the internal UI component library! This guide will help you install the library, set up the theme, and start building interfaces.
 
@@ -7,10 +7,10 @@ Welcome to the internal UI component library! This guide will help you install t
 First, install the library and its peer dependencies in your project:
 
 ```bash
-npm install @acme/ui
+npm install @deepika27-alt/ui
 ```
 
-*(Note: Replace `@acme/ui` with the actual package name of the library once published).*
+*(Note: Replace `@deepika27-alt/ui` with the actual package name of the library once published).*
 
 ## 2. Setting Up the Theme Provider
 
@@ -20,10 +20,10 @@ In your main entry file (e.g., `App.tsx`, `index.tsx`, or `_app.tsx` for Next.js
 
 ```tsx
 import React from 'react';
-import { ThemeProvider } from '@acme/ui';
+import { ThemeProvider } from '@deepika27-alt/ui';
 
 // Import global styles if needed
-import '@acme/ui/styles.css';
+import '@deepika27-alt/ui/styles.css';
 
 export default function App({ children }) {
   return (
@@ -46,9 +46,9 @@ A standard login form using `Card`, `Input`, and `Button` components.
 
 ```tsx
 import React from 'react';
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@acme/ui/Card';
-import { Input } from '@acme/ui/Input';
-import { Button } from '@acme/ui/Button';
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@deepika27-alt/ui/Card';
+import { Input } from '@deepika27-alt/ui/Input';
+import { Button } from '@deepika27-alt/ui/Button';
 
 export function LoginForm() {
   return (
@@ -80,7 +80,7 @@ Using the `DataTable` component to render a list of users.
 
 ```tsx
 import React from 'react';
-import { DataTable } from '@acme/ui/DataTable';
+import { DataTable } from '@deepika27-alt/ui/DataTable';
 
 const data = [
   { id: '1', name: 'Alice Smith', role: 'Admin', status: 'Active' },
@@ -109,8 +109,8 @@ A confirmation dialog using the `Modal` and `Button` components.
 
 ```tsx
 import React, { useState } from 'react';
-import { Modal, ModalContent, ModalHeader, ModalTitle, ModalDescription, ModalFooter } from '@acme/ui/Modal';
-import { Button } from '@acme/ui/Button';
+import { Modal, ModalContent, ModalHeader, ModalTitle, ModalDescription, ModalFooter } from '@deepika27-alt/ui/Modal';
+import { Button } from '@deepika27-alt/ui/Button';
 
 export function DeleteAccountConfirm() {
   const [isOpen, setIsOpen] = useState(false);

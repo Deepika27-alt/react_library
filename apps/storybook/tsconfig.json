@@ -5,8 +5,8 @@
     "noEmit": true,
     "types": ["node"],
     "paths": {
-      "@acme/ui": ["../../packages/ui/src/index.ts"],
-      "@acme/ui/tokens": ["../../packages/ui/src/tokens/index.ts"]
+      "@deepika27-alt/ui": ["../../packages/ui/src/index.ts"],
+      "@deepika27-alt/ui/tokens": ["../../packages/ui/src/tokens/index.ts"]
     }
   },
   "include": [".storybook/**/*", "src/**/*"],

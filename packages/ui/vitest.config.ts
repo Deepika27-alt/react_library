@@ -16,7 +16,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@acme/ui': '/src',
+      '@deepika27-alt/ui': '/src',
     },
   },
 });

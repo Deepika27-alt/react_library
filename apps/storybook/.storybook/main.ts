@@ -44,10 +44,10 @@ const config: StorybookConfig = {
       plugins: [react()],
       resolve: {
         alias: {
-          // Resolve @acme/ui directly to source — no build step required
-          '@acme/ui': path.join(uiSrc, 'index.ts'),
-          // Sub-path: @acme/ui/tokens
-          '@acme/ui/tokens': path.join(uiSrc, 'tokens/index.ts'),
+          // Resolve @deepika27-alt/ui directly to source — no build step required
+          '@deepika27-alt/ui': path.join(uiSrc, 'index.ts'),
+          // Sub-path: @deepika27-alt/ui/tokens
+          '@deepika27-alt/ui/tokens': path.join(uiSrc, 'tokens/index.ts'),
         },
       },
     });

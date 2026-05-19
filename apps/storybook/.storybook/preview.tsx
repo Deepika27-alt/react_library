@@ -1,6 +1,6 @@
 import type { Preview } from '@storybook/react';
 import React from 'react';
-import { ThemeProvider } from '@acme/ui';
+import { ThemeProvider } from '@deepika27-alt/ui';
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
 
 const preview: Preview = {

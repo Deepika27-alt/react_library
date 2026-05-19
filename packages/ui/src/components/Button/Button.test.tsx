@@ -26,7 +26,7 @@ describe('Button', () => {
   // ── Variants ─────────────────────────────────────────────────────────────
   it.each(['primary', 'secondary', 'ghost', 'danger', 'link'] as const)(
     'applies the %s variant class',
-    (variant) => {
+    (variant: any) => {
       render(<Button variant={variant}>Btn</Button>);
       expect(screen.getByRole('button')).toHaveClass(`acme-button--${variant}`);
     },
@@ -35,7 +35,7 @@ describe('Button', () => {
   // ── Sizes ────────────────────────────────────────────────────────────────
   it.each(['sm', 'md', 'lg'] as const)(
     'applies the %s size class',
-    (size) => {
+    (size: any) => {
       render(<Button size={size}>Btn</Button>);
       expect(screen.getByRole('button')).toHaveClass(`acme-button--${size}`);
     },
