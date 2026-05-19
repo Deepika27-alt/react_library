@@ -4,7 +4,7 @@
   "description": "Acme React component library",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Deepika27-alt/react_library.git"
+    "url": "git+https://github.com/Deepika27-alt/react_library.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
