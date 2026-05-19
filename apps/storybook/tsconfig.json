@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "noEmit": true,
+    "types": ["node"],
+    "paths": {
+      "@acme/ui": ["../../packages/ui/src/index.ts"],
+      "@acme/ui/tokens": ["../../packages/ui/src/tokens/index.ts"]
+    }
+  },
+  "include": [".storybook/**/*", "src/**/*"],
+  "references": [
+    { "path": "../../packages/ui" }
+  ]
+}
