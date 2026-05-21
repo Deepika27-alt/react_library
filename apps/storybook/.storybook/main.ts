@@ -8,7 +8,7 @@ const uiSrc = resolve(__dirname, '../../../packages/ui/src');
 
 const config: StorybookConfig = {
   stories: [
-    '../../packages/ui/src/**/*.stories.@(ts|tsx|mdx)',
+    '../../../packages/ui/src/**/*.stories.@(ts|tsx|mdx)',
   ],
   addons: [
     '@storybook/addon-essentials',
@@ -39,6 +39,8 @@ const config: StorybookConfig = {
       plugins: [react()],
       resolve: {
         alias: {
+          // Sub-path: @deepika27-alt/ui/styles
+          '@deepika27-alt/ui/styles': resolve(__dirname, '../../../packages/ui/dist/tokens.css'),
           // Resolve @deepika27-alt/ui directly to source — no build step required
           '@deepika27-alt/ui': join(uiSrc, 'index.ts'),
           // Sub-path: @deepika27-alt/ui/tokens

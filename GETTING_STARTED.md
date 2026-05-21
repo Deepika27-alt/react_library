@@ -1,4 +1,4 @@
-﻿# Getting Started with Our React UI Library
+# Getting Started with Our React UI Library
 
 Welcome to the internal UI component library! This guide will help you install the library, set up the theme, and start building interfaces.
 
@@ -23,7 +23,7 @@ import React from 'react';
 import { ThemeProvider } from '@deepika27-alt/ui';
 
 // Import global styles if needed
-import '@deepika27-alt/ui/styles.css';
+import '@deepika27-alt/ui/styles';
 
 export default function App({ children }) {
   return (
@@ -46,17 +46,15 @@ A standard login form using `Card`, `Input`, and `Button` components.
 
 ```tsx
 import React from 'react';
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@deepika27-alt/ui/Card';
-import { Input } from '@deepika27-alt/ui/Input';
-import { Button } from '@deepika27-alt/ui/Button';
+import { Card, Input, Button } from '@deepika27-alt/ui';
 
 export function LoginForm() {
   return (
     <Card className="max-w-md mx-auto mt-10">
-      <CardHeader>
-        <CardTitle>Welcome Back</CardTitle>
-      </CardHeader>
-      <CardContent className="space-y-4">
+      <Card.Header>
+        <h3 className="text-lg font-semibold">Welcome Back</h3>
+      </Card.Header>
+      <Card.Body className="space-y-4">
         <div className="space-y-1">
           <label htmlFor="email" className="text-sm font-medium">Email</label>
           <Input id="email" type="email" placeholder="name@example.com" />
@@ -65,10 +63,10 @@ export function LoginForm() {
           <label htmlFor="password" className="text-sm font-medium">Password</label>
           <Input id="password" type="password" />
         </div>
-      </CardContent>
-      <CardFooter>
+      </Card.Body>
+      <Card.Footer>
         <Button className="w-full">Sign In</Button>
-      </CardFooter>
+      </Card.Footer>
     </Card>
   );
 }
@@ -80,7 +78,7 @@ Using the `DataTable` component to render a list of users.
 
 ```tsx
 import React from 'react';
-import { DataTable } from '@deepika27-alt/ui/DataTable';
+import { DataTable } from '@deepika27-alt/ui';
 
 const data = [
   { id: '1', name: 'Alice Smith', role: 'Admin', status: 'Active' },
@@ -109,8 +107,7 @@ A confirmation dialog using the `Modal` and `Button` components.
 
 ```tsx
 import React, { useState } from 'react';
-import { Modal, ModalContent, ModalHeader, ModalTitle, ModalDescription, ModalFooter } from '@deepika27-alt/ui/Modal';
-import { Button } from '@deepika27-alt/ui/Button';
+import { Modal, ModalContent, ModalHeader, ModalTitle, ModalDescription, ModalFooter, Button } from '@deepika27-alt/ui';
 
 export function DeleteAccountConfirm() {
   const [isOpen, setIsOpen] = useState(false);
