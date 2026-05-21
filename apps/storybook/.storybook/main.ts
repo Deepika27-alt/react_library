@@ -1,7 +1,12 @@
+// This file has been automatically migrated to valid ESM format by Storybook.
+import { fileURLToPath } from "node:url";
 import type { StorybookConfig } from '@storybook/react-vite';
 import { mergeConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { dirname, join, resolve } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // Resolve from apps/storybook/.storybook/ → packages/ui/src
 const uiSrc = resolve(__dirname, '../../../packages/ui/src');
@@ -10,19 +15,19 @@ const config: StorybookConfig = {
   stories: [
     '../../../packages/ui/src/**/*.stories.@(ts|tsx|mdx)',
   ],
+
   addons: [
-    '@storybook/addon-essentials',
-    '@storybook/addon-interactions',
-    '@storybook/addon-links',
-    '@storybook/addon-viewport',
-    '@storybook/addon-docs',
-    '@storybook/addon-themes',
-    '@chromatic-com/storybook',
+    getAbsolutePath("@storybook/addon-links"),
+    getAbsolutePath("@storybook/addon-docs"),
+    getAbsolutePath("@storybook/addon-themes"),
+    getAbsolutePath("@chromatic-com/storybook")
   ],
+
   framework: {
-    name: '@storybook/react-vite',
+    name: getAbsolutePath("@storybook/react-vite"),
     options: {},
   },
+
   typescript: {
     check: false,
     reactDocgen: 'react-docgen-typescript',
@@ -31,9 +36,7 @@ const config: StorybookConfig = {
       tsconfigPath: resolve(__dirname, '../../../packages/ui/tsconfig.json'),
     },
   },
-  docs: {
-    autodocs: 'tag',
-  },
+
   viteFinal(config) {
     return mergeConfig(config, {
       plugins: [react()],
@@ -48,7 +51,11 @@ const config: StorybookConfig = {
         },
       },
     });
-  },
+  }
 };
 
 export default config;
+
+function getAbsolutePath(value: string): any {
+  return dirname(fileURLToPath(import.meta.resolve(`${value}/package.json`)));
+}

@@ -12,7 +12,7 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-    backgrounds: { disable: true }, // We use the themes addon instead
+    backgrounds: { disabled: true }, // We use the themes addon instead
   },
   decorators: [
     withThemeByDataAttribute({
@@ -23,7 +23,7 @@ const preview: Preview = {
       defaultTheme: 'light',
       attributeName: 'data-theme',
     }),
-    (Story) => (
+    (Story: any) => (
       <ThemeProvider>
         <Story />
       </ThemeProvider>

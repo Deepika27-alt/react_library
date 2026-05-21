@@ -7,7 +7,7 @@ const meta: Meta<typeof Tooltip> = {
   title: 'Complex/Tooltip',
   component: Tooltip,
   decorators: [
-    (Story) => (
+    (Story: any) => (
       <TooltipProvider>
         <Story />
       </TooltipProvider>
@@ -37,7 +37,7 @@ export default meta;
 type Story = StoryObj<typeof Tooltip>;
 
 export const Default: Story = {
-  render: (args) => (
+  render: (args: any) => (
     <div style={{ display: 'flex', justifyContent: 'center', padding: '4rem' }}>
       <Tooltip {...args}>
         <Button variant="secondary">Hover Over Me</Button>

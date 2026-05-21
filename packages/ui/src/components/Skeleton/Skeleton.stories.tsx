@@ -19,7 +19,7 @@ export const Text: StoryObj<typeof SkeletonText> = {
     lines: 3,
     lastLineWidth: '60%',
   },
-  render: (args) => (
+  render: (args: any) => (
     <div className="w-80">
       <SkeletonText {...args} />
     </div>

@@ -25,7 +25,7 @@ export const Elevated: Story = {
   args: {
     variant: 'elevated',
   },
-  render: (args) => (
+  render: (args: any) => (
     <Card {...args} className="max-w-md">
       <Card.Header>
         <h3 className="text-lg font-semibold">Elevated Card</h3>
@@ -48,7 +48,7 @@ export const Outlined: Story = {
   args: {
     variant: 'outlined',
   },
-  render: (args) => (
+  render: (args: any) => (
     <Card {...args} className="max-w-md">
       <Card.Header>
         <h3 className="text-lg font-semibold">Outlined Card</h3>
@@ -69,7 +69,7 @@ export const Filled: Story = {
   args: {
     variant: 'filled',
   },
-  render: (args) => (
+  render: (args: any) => (
     <Card {...args} className="max-w-md">
       <Card.Header>
         <h3 className="text-lg font-semibold">Filled Card</h3>
