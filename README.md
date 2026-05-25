@@ -62,7 +62,31 @@ Install the UI package and its peer dependencies into your consumer application:
 npm install @deepika27-alt/ui
 ```
 
-### 2. Setting Up the Theme Provider
+### 2. Configure Tailwind CSS
+
+Since our components use Tailwind CSS classes dynamically, your consumer application's Tailwind compiler must scan our packaged components to generate their style declarations. Additionally, you should load our theme preset to map our dynamic design tokens to Tailwind utility classes.
+
+Update your `tailwind.config.js` to include the preset and source content scanning:
+
+```javascript
+module.exports = {
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx}",
+    // Add this to scan the UI library compiled files inside node_modules:
+    "./node_modules/@deepika27-alt/ui/dist/**/*.js"
+  ],
+  presets: [
+    // Add the dynamic design tokens theme mapping preset:
+    require('@deepika27-alt/ui/tailwind-preset')
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+### 3. Setting Up the Theme Provider
 Wrap your application's root component inside the `ThemeProvider` to hook up the styles and design tokens:
 
 ```tsx

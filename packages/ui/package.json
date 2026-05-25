@@ -29,13 +29,15 @@
       "import": "./dist/tokens/index.js",
       "require": "./dist/tokens/index.cjs"
     },
-    "./styles": "./dist/tokens.css"
+    "./styles": "./dist/tokens.css",
+    "./tailwind-preset": "./tailwind.preset.js"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "tailwind.preset.js"
   ],
   "scripts": {
     "build": "tsup",

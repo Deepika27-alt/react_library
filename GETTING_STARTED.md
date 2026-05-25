@@ -12,7 +12,31 @@ npm install @deepika27-alt/ui
 
 *(Note: Replace `@deepika27-alt/ui` with the actual package name of the library once published).*
 
-## 2. Setting Up the Theme Provider
+## 2. Configure Tailwind CSS
+
+Since our components use Tailwind CSS classes dynamically, your consumer application's Tailwind compiler must scan our packaged components to generate their style declarations. Additionally, you should load our theme preset to map our dynamic design tokens to Tailwind utility classes.
+
+Update your `tailwind.config.js` to include the preset and source content scanning:
+
+```javascript
+module.exports = {
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx}",
+    // Add this to scan the UI library compiled files inside node_modules:
+    "./node_modules/@deepika27-alt/ui/dist/**/*.js"
+  ],
+  presets: [
+    // Add the dynamic design tokens theme mapping preset:
+    require('@deepika27-alt/ui/tailwind-preset')
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+## 3. Setting Up the Theme Provider
 
 To ensure all components have the correct design tokens (colors, typography, spacing, etc.) and support dark/light modes, you must wrap your application root with the `ThemeProvider`.
 
@@ -22,7 +46,7 @@ In your main entry file (e.g., `App.tsx`, `index.tsx`, or `_app.tsx` for Next.js
 import React from 'react';
 import { ThemeProvider } from '@deepika27-alt/ui';
 
-// Import global styles if needed
+// Import CSS variables and global components styles
 import '@deepika27-alt/ui/styles';
 
 export default function App({ children }) {
@@ -36,7 +60,7 @@ export default function App({ children }) {
 
 ---
 
-## 3. Usage Examples
+## 4. Usage Examples
 
 Here are three common patterns to help you get started.
 
@@ -147,14 +171,14 @@ export function DeleteAccountConfirm() {
 
 ---
 
-## 4. How to Request a New Component
+## 5. How to Request a New Component
 
 If you need a component that doesn't currently exist in the library:
 1. **Check Storybook**: Verify if an existing component can be customized for your use case.
 2. **Open an Issue**: Go to our repository's Issues tab and create a "Component Request" issue.
 3. **Provide Context**: Include the use case, required API (props), and any design mockups.
 
-## 5. How to Contribute
+## 6. How to Contribute
 
 We welcome contributions! If you've built a component you think would be useful to other teams, or if you want to fix a bug:
 1. Please read our [CONTRIBUTING.md](./CONTRIBUTING.md) guide.
