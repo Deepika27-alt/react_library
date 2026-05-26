@@ -2,7 +2,6 @@
 import { fileURLToPath } from "node:url";
 import type { StorybookConfig } from '@storybook/react-vite';
 import { mergeConfig } from 'vite';
-import react from '@vitejs/plugin-react';
 import { dirname, join, resolve } from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -39,7 +38,6 @@ const config: StorybookConfig = {
 
   viteFinal(config) {
     return mergeConfig(config, {
-      plugins: [react()],
       resolve: {
         alias: {
           // Sub-path: @deepika27-alt/ui/styles
