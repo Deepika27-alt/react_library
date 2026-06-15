@@ -191,6 +191,3 @@ We welcome external and internal contributions to the Acme Component Library!
     npx changeset
     ```
 
----
-
-*Acme Design System — Built with ❤️ for outstanding user experiences.*
